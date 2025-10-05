@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class ProductsController {
     @GetMapping
     public String get() {
+        System.out.println("Bu konsoldaki product service çalıştı.");
         return "Merhaba, Product-Service";
     }
 }
