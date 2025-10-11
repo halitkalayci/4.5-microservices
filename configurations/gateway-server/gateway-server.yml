@@ -1,0 +1,22 @@
+spring:
+  cloud:
+    gateway:
+      server:
+        webflux:
+          routes:
+            - id: product-service-route
+              uri: lb://product-service
+              predicates:
+                - Path=/api/v1/products/**
+            - id: payment-service-static-route
+              uri: lb://payment-service
+              predicates:
+                - Path=/api/v1/payments/**
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+
+server:
+  port: 8888

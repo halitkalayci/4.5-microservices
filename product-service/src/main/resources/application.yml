@@ -1,7 +1,8 @@
 spring:
   application:
     name: product-service
-
+  profiles:
+    active: dev
 server:
   port: 8080
 
