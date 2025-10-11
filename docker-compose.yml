@@ -15,3 +15,6 @@ services:
       - config-server
     environment:
       - CONFIG_URI=http://config-server:8989
+
+# Bütün servisleri docker image haline getirelim
+# docker composeda hepsini temsil edecek servisleri yazalım hepsini dockerda ayağa kaldırabiliyor olalım.
