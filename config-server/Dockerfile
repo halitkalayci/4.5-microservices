@@ -9,6 +9,7 @@ WORKDIR /app
 
 COPY . .
 
-RUN mvn clean package -DskipTests
+RUN mvn dependency:purge-local-repository
+RUN mvn -U clean package -DskipTests
 
 ENTRYPOINT ["java","-jar","target/config-server-0.0.1-SNAPSHOT.jar"]
