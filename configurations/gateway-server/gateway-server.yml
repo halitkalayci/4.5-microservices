@@ -19,4 +19,4 @@ eureka:
     register-with-eureka: true
 
 server:
-  port: 8887
+  port: 8888
