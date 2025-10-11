@@ -3,5 +3,5 @@ spring:
     name: gateway-server
   profiles:
     active: dev
-
-# 11:20
+  config:
+    import: configserver:http://localhost:8989
