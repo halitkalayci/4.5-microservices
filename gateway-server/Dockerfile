@@ -16,4 +16,3 @@ FROM eclipse-temurin:21-jre AS runtime
 COPY --from=builder /build/target/*-SNAPSHOT.jar /app/app.jar
 
 ENTRYPOINT ["java","-jar","/app/app.jar"]
-
