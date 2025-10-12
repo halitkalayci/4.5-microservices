@@ -16,7 +16,7 @@ public class OrdersController {
 
     @GetMapping
     public String get() {
-        String responseFromProductService = productClient.get();
+        String responseFromProductService = productClient.get("Halit");
         return "Order Service Çalıştı, Product Serviceden Gelen Cevap: " + responseFromProductService;
     }
 
